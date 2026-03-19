@@ -1,0 +1,13 @@
+name: Simple secrets example
+on:
+  push:
+    branches:
+      - main
+jobs:
+  print_secret:
+    runs-on: ubuntu-latest
+    step:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Name the secret
+        uses: echo "The secret key is ${{ secrets.MY_SECRET }}"
