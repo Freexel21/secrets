@@ -6,7 +6,7 @@ on:
 jobs:
   print_secret:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Name the secret
